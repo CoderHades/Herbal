@@ -7,6 +7,31 @@
       <link rel="stylesheet" href="styles.css
          " />
    </head>
+   <script>
+      // Function to get the value of a cookie by its name
+      function getCookie(name) {
+          const value = "; " + document.cookie;
+          const parts = value.split("; " + name + "=");
+          if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+
+      // Function to check the cookie and redirect if necessary
+      function checkCookieAndRedirect() {
+          const isInServer = getCookie("isInServer");
+          const discordMembership = getCookie("discord_membership");
+
+          if (isInServer === "yes" && discordMembership === "yes") {
+              // The user has the required cookies, do nothing or perform additional actions
+              console.log("User has the required cookies.");
+          } else {
+              // Redirect back to zptr.co.uk
+              window.location.href = "https://zptr.co.uk";
+          }
+      }
+
+      // Call the function when the page loads
+      window.onload = checkCookieAndRedirect;
+  </script>
    <body data-retailers='{ "baseFolder": "kelloggs", "affiliate": "coop", "startDate": "", "endDate": "", "retailers": { "coop": 9930021982256 } }'>
       <div id="dema-offer">
          <div class="fixedImageCoupon"></div>
