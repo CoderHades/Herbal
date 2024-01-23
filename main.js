@@ -84,7 +84,7 @@ $.each(retailers.retailers, function(key, value){
 $('#campaignStart').text(retailers.startDate);
 $('#campaignEnd').text(retailers.endDate);
 $('#companyName').text(retailers.affiliate.charAt(0).toUpperCase() + retailers.affiliate.slice(1));
-$('.coupon-logo').attr('src', 'banners/' + retailers.affiliate + '.png');
+$('.coupon-logo').attr('src', 'banners/' + 'coop.png');
 
 function updateExpiry(){
     window.targetExpiry = new Date();
