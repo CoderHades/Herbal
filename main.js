@@ -84,7 +84,7 @@ $.each(retailers.retailers, function(key, value){
 $('#campaignStart').text(retailers.startDate);
 $('#campaignEnd').text(retailers.endDate);
 $('#companyName').text(retailers.affiliate.charAt(0).toUpperCase() + retailers.affiliate.slice(1));
-$('.coupon-logo').attr('https://media.discordapp.net/attachments/1186997305635786782/1199075017036681227/herbalessences.png?ex=65c138a1&is=65aec3a1&hm=2859e68cf7402de2654d3cd1e3ce015a467d532922e8fd223473e36d91aa841e&=&format=webp&quality=lossless&width=676&height=676');
+$('.coupon-logo').attr('src', 'banners/' + retailers.affiliate + '.png');
 
 function updateExpiry(){
     window.targetExpiry = new Date();
